@@ -236,6 +236,9 @@ MonoBehaviour:
   characters:
   - {fileID: 21300000, guid: 202af37c1602694498ad5ece5a026852, type: 3}
   - {fileID: 21300000, guid: 54bd85aeba7e601468d83699918276de, type: 3}
+  - {fileID: 21300000, guid: 4fcb7e50f6a7e1f4894826d0995c2d77, type: 3}
+  - {fileID: 21300000, guid: 3808e9b81af25cb45839b04afefaa326, type: 3}
+  - {fileID: 21300000, guid: 7c96f4b68779b0644be870a78850ab70, type: 3}
   tile: {fileID: 3175034366657447269, guid: bdf489e76eb4f3f468481b9c2b206354, type: 3}
   xSize: 4
   ySize: 7

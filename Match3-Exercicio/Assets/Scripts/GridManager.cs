@@ -27,16 +27,30 @@ public class GridManager : MonoBehaviour
         float startX = transform.position.x;
         float startY = transform.position.y;
 
+         Sprite[] previousLeft = new Sprite[ySize];
+         Sprite previousBelow = null;
         for (int x = 0; x < xSize; x++)
         {
         
                for (int y = 0; y < ySize; y++) {
                 GameObject newTile = Instantiate(tile, new Vector3(startX + (xOffset * x), startY +                                                                 (yOffset * y), 0), tile.transform.rotation);
                 newTile.transform.parent = transform;
-                Sprite newSprite = characters[Random.Range(0, characters.Count)];
+
+                List<Sprite> possivelCharacters = new List<Sprite>();
+                possivelCharacters.AddRange(characters);
+
+                possivelCharacters.Remove(previousLeft[y]);
+                possivelCharacters.Remove(previousBelow);
+
+                Sprite newSprite = possivelCharacters[Random.Range(0, possivelCharacters.Count)];
                 newTile.GetComponent<SpriteRenderer>().sprite = newSprite;
+
+                previousLeft[y] = newSprite;
+                previousBelow = newSprite;
 
             }
         }
+
+        
     }
 }
