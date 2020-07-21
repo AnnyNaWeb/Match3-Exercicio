@@ -379,6 +379,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4fcb7e50f6a7e1f4894826d0995c2d77, type: 3}
   - {fileID: 21300000, guid: 3808e9b81af25cb45839b04afefaa326, type: 3}
   - {fileID: 21300000, guid: 7c96f4b68779b0644be870a78850ab70, type: 3}
+  - {fileID: 21300000, guid: ef49d3c23e5b75043a890e53a5e0878a, type: 3}
+  - {fileID: 21300000, guid: 196b646079d499840ad48cadbe2a6c7e, type: 3}
   tile: {fileID: 4349154335558601220, guid: f2a3be6c12736b248bd4d63e183379a8, type: 3}
   xSize: 4
   ySize: 7
