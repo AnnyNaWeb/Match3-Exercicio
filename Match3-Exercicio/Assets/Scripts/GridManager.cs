@@ -23,7 +23,7 @@ public class GridManager : MonoBehaviour
     private void CreateGrid (float xOffset, float yOffset)
     {
         tiles = new GameObject[xSize, ySize];
-
+        
         float startX = transform.position.x;
         float startY = transform.position.y;
 
@@ -32,7 +32,10 @@ public class GridManager : MonoBehaviour
         
                for (int y = 0; y < ySize; y++) {
                 GameObject newTile = Instantiate(tile, new Vector3(startX + (xOffset * x), startY +                                                                 (yOffset * y), 0), tile.transform.rotation);
-            
+                newTile.transform.parent = transform;
+                Sprite newSprite = characters[Random.Range(0, characters.Count)];
+                newTile.GetComponent<SpriteRenderer>().sprite = newSprite;
+
             }
         }
     }
