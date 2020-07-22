@@ -46,16 +46,16 @@ public class mouseClick : MonoBehaviour
             if (precedMudando == null){
                 Pegou();
             } else{
-                if(GetAllAdjacentGrid().Contains(precedMudando.gameObject)){
-                    MudaSprite(precedMudando.render);
-                    precedMudando.Soltou();
-                }
-                else{
-                    precedMudando.GetComponent<mouseClick>().Soltou();
-                    Pegou();
-                }
+            //    if(GetAllAdjacentGrid().Contains(precedMudando.gameObject)){
+               //     MudaSprite(precedMudando.render);
+                //    precedMudando.Soltou();
+               // }
+             //  else{
+               //    precedMudando.GetComponent<mouseClick>().Soltou();
+               //    Pegou();
+              // }
               
-                //MudaSprite(precedMudando.render);
+              //  MudaSprite(precedMudando.render);
               //  precedMudando.Soltou();
             }
         }
