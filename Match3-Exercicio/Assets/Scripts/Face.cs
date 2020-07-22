@@ -33,6 +33,17 @@ public class Face : MonoBehaviour
        
     }
 
+    public void TrocaSprite(SpriteRenderer sRender2){
+        if(sRender.sprite == sRender2.sprite){
+            return;
+        }
+
+        Sprite auxSprite = sRender2.sprite;
+        sRender2.sprite = sRender.sprite;
+        sRender.sprite = auxSprite;
+        soundManager.PlaySound("Swap");
+    }
+
     void OnMouseDown(){
     //verifique se é o momento de selecionar blocos
         if(sRender.sprite == null || GradeManager.instance.Mudando){
@@ -46,6 +57,7 @@ public class Face : MonoBehaviour
             if(eSelected == null){
                 Selecionado();
             } else{
+                TrocaSprite(eSelected.sRender);
                 eSelected.SoltouSelecao();
             }
 
